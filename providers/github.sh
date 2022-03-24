@@ -17,7 +17,7 @@ echo "Deploying to ${REPOSITORY} on branch ${BRANCH}"
 echo "Deploying to https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git"
 
 mkdir blog
-mv * blog
+mv * blog || true
 
 REMOTE_REPO="https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git" && \
   git init && \
